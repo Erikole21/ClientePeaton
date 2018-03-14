@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClientePeatonXamarin.Views.SigueEnvioPage" Title="Sigue Tu Envío" BackgroundImage="fondogeneral.png">
+    <ContentPage.Content>
+        <ScrollView Padding="5">
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Envío No." FontSize="Large" FontAttributes="Bold"/>
+                    <Label Text="{Binding NumeroGuia}" FontSize="Large" FontAttributes="Bold"/>
+                </StackLayout>
+                <Label Text="ULTIMO ESTADO DEL ENVÍO" HorizontalTextAlignment="Center" Grid.Row="1" FontSize="Small" FontAttributes="Bold"/>
+                <StackLayout Padding="2" BackgroundColor="White" Grid.Row="2" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Label Text="{Binding EstadoGuia}" FontSize="Large" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                    <Label Text="{Binding FechaEstado}" FontSize="9" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                    <Label Text="{Binding Motivo}" FontSize="9" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <Grid Grid.Row="3">
+                    
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
